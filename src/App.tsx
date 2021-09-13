@@ -15,7 +15,7 @@ function App() {
       <header className="header">
         <img src={logo} className="header__logo" alt="logo" />
         <h1 className="header__label">
-          React 4 beginners
+          Done App
         </h1>
       </header>
       <section className="content editor">
