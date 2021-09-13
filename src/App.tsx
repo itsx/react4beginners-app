@@ -23,6 +23,7 @@ function App() {
           className="editor__textarea" 
           placeholder='What have you done today...?' 
           onChange={(e) => setContent(e.target.value)}
+          autoFocus
         >
           {content}
         </textarea>

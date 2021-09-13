@@ -7,12 +7,12 @@
 .header {
   flex: none;
 
-  background-color: #0f0073;
+  background-color: var(--bg-color-theme);;
   color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 8px;
+  padding: 16px;
   gap: 16px;
 }
 
@@ -21,8 +21,13 @@
   height: 32px;
 }
 
+.header__label {
+  margin: 0;
+}
+
 .content {
   flex: 1 1 0%;
+  background-color: white;
 }
 
 .editor {
@@ -39,5 +44,8 @@
 
 .editor__textarea {
   flex: 1 1 0%;
-  padding: 8px;
+  padding: 16px;
+  font-size: 18px;
+  outline: none;
+  border: none;
 }
