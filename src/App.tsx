@@ -1,35 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { NavBar } from './NavBar'
+import { NoteView } from './NoteView'
+import { DayPicker } from './DayPicker'
 
-function App() {
+import './App.css'
 
-  const [content, setContent] = React.useState(localStorage.getItem('note') ?? '')
+export function App() {
 
-  React.useEffect(() => {
-    localStorage.setItem('note', content)
-  }, [content])
+  const [selectedDay, selectDay] = React.useState<Date | null>(null)
 
   return (
     <div className="app">
-      <header className="header">
-        <img src={logo} className="header__logo" alt="logo" />
-        <h1 className="header__label">
-          Done App
-        </h1>
-      </header>
-      <section className="content editor">
-        <textarea 
-          className="editor__textarea" 
-          placeholder='What have you done today...?' 
-          onChange={(e) => setContent(e.target.value)}
-          autoFocus
-        >
-          {content}
-        </textarea>
-      </section>
+      <NavBar className='app__navbar' />
+
+      {!selectedDay && (
+        <DayPicker className='app__content' onDayPicked={selectDay} />
+      )}
+
+      {selectedDay && (
+        <NoteView className='app__content' day={selectedDay} />
+      )}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

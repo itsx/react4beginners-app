@@ -1,0 +1,23 @@
+.day-picker {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.react-calendar__viewContainer {
+  flex: 1 1 0%;
+}
+
+.react-calendar__month-view, .react-calendar__month-view > div, .react-calendar__month-view > div > div {
+  height: 100%;
+}
+
+.react-calendar__month-view > div > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.react-calendar__month-view__days {
+  flex: 1 1 0%;
+}
