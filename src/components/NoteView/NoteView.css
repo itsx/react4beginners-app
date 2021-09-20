@@ -1,4 +1,4 @@
-.editor {
+.note-view {
   width: 100%;
   height: 100%;
   padding: 8px;
@@ -10,7 +10,7 @@
   justify-content: center;
 }
 
-.editor__textarea {
+.note-view__textarea {
   flex: 1 1 0%;
   padding: 16px;
   font-size: 18px;

@@ -21,9 +21,9 @@ export function NoteView(props: NoteViewProps) {
   }, [content, day, saveNote])
 
   return (
-    <section className={classNames("editor", className)}>
+    <section className={classNames("note-view", className)}>
       <textarea 
-        className="editor__textarea" 
+        className="note-view__textarea" 
         placeholder={`What have you done ${day.toLocaleDateString()}...?`}
         onChange={(e) => setContent(e.target.value)}
         autoFocus
