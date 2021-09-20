@@ -35,7 +35,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate-slides": "cd docs && npx @marp-team/marp-cli@latest slides.md --allow-local-files -o slides_black.pdf"
   },
   "eslintConfig": {
     "extends": [
