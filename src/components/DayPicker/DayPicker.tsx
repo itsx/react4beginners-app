@@ -12,7 +12,7 @@ export function DayPicker(props: DayPickerProps) {
 
   // TODO:
   // - Integrate a react-calendar library (don't forget to import it's CSS)
-  // - Escalate the state containing picked day via props
+  // - Lift the state containing picked day up via props
   // - Use `tileClassName` prop to set certain class name if day has a prop and other class name if it doesn't
 
   // Class name tips:
