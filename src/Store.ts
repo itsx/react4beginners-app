@@ -30,7 +30,8 @@ export function useStoreProvider(): Store {
   }, [notesPerDay])
 
   const hasNote = useCallback((day: Date): boolean => {
-    return notesPerDay[day.getTime()] !== undefined
+    const note = notesPerDay[day.getTime()]
+    return (note?.length ?? 0) > 0
   }, [notesPerDay])
 
   const saveNote = useCallback((note: string, day: Date) => {
